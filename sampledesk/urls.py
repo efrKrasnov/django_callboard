@@ -1,10 +1,8 @@
 # pylint: disable=invalid-name
 from django.contrib import admin
-from django.urls import path
-
-from ddesk.views import index
+from django.urls import path, include
 
 urlpatterns = [
-    path('ddesk/', index),
+    path('ddesk/', include('ddesk.urls')),
     path('admin/', admin.site.urls)
 ]
